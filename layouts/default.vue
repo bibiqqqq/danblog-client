@@ -19,7 +19,7 @@ export default {
   body
     font-family: "Menlo", "Meslo LG", monospace
     font-size: 14px
-    font-weight: 500
+    font-weight: 400
     margin: 0
     color: #c9cacc
     background-color: #1d1f21

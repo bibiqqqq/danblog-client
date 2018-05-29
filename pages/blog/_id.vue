@@ -9,7 +9,7 @@
       v-for="item in list"
     )
       span.title {{ item.title }}
-      span.created {{ item.updatedAt | date }}
+      span.created {{ item.updatedAt | formatDate }}
       i.i |
       span.read-more(
         @click="handleReadMore(item._id)"
