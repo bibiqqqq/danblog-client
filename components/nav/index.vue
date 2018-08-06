@@ -4,7 +4,10 @@
     nuxt-link.blog(to="/blog") Blog
     nuxt-link.tags(to="/tags") Tags
     nuxt-link.repo(to="/repo") Repo
-    a.github Github
+    a.github(
+      href="https://github.com/bibiqqqq",
+      target="_blank"
+    ) Github
 </template>
 
 <script>

@@ -2,7 +2,7 @@
   .item-detail
     h1.title {{ title }}
     span.tag {{ tag }}
-    span.createdAt {{ updatedAt | relativeTime }}
+    span.createdAt {{ createdAt | relativeTime }}
     .mark-content
       markdown(:content="content")
 </template>
@@ -15,7 +15,7 @@ export default {
     if (res.data.code === 0) {
       return {
         title: res.data.data.title,
-        updatedAt: res.data.data.updatedAt,
+        createdAt: res.data.data.createdAt,
         tag: res.data.data.tag,
         content: res.data.data.content
       }

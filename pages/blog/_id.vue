@@ -1,15 +1,15 @@
 <template lang="pug">
   .blog-list
-    paging(
-      :total="total",
-      :currentPage="currentPage"
-      @listenToPage="listenToPage"
-    )
+    //- paging(
+    //-   :total="total",
+    //-   :currentPage="currentPage"
+    //-   @listenToPage="listenToPage"
+    //- )
     .item(
       v-for="item in list"
     )
       span.title {{ item.title }}
-      span.created {{ item.updatedAt | formatDate }}
+      span.created {{ item.createdAt | formatDate }}
       i.i |
       span.read-more(
         @click="handleReadMore(item._id)"
@@ -32,20 +32,20 @@ export default {
   components: {
     paging
   },
-  computed: {
-    currentPage () {
-      return +this.$route.params.id || 1
-    }
-  },
-  transition: 'slide',
+  // computed: {
+  //   currentPage () {
+  //     return +this.$route.params.id || 1
+  //   }
+  // },
+  // transition: 'slide',
   methods: {
-    listenToPage (page) {
-      console.log(this.list)
-      this.$router.push({
-        name: 'blog-id',
-        params: { id: page }
-      })
-    },
+    // listenToPage (page) {
+    //   console.log(this.list)
+    //   this.$router.push({
+    //     name: 'blog-id',
+    //     params: { id: page }
+    //   })
+    // },
     handleReadMore (articleId) {
       this.$router.push({
         name: 'item-id',
@@ -58,7 +58,8 @@ export default {
 
 <style scoped lang="sass">
   .blog-list
-    margin-top: 40px
+    margin-top: 80px
+    padding-bottom: 40px
     .item
       padding: 20px 0
       .title

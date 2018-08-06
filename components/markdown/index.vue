@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import hlj from 'highlight.js'
 export default {
   props: {
     content: String
